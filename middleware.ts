@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server"
 
 // Dummy user sessions - in a real app, this would be stored in a database
 // and validated with proper authentication tokens

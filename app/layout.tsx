@@ -1,16 +1,16 @@
-import type React from "react"
+import { BookOpen, Search, ShoppingCart } from "lucide-react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
 import Link from "next/link"
-import { BookOpen, Search, ShoppingCart } from "lucide-react"
+import type React from "react"
+import "./globals.css"
 
-import { ThemeProvider } from "@/components/theme-provider"
-import { Button } from "@/components/ui/button"
-import { MainNav, MobileNav } from "@/components/main-nav"
 import { AuthProvider } from "@/components/auth-provider"
+import { MainNav, MobileNav } from "@/components/main-nav"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
 import { UserAccountNav } from "@/components/user-account-nav"
-
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -44,6 +44,9 @@ export default function RootLayout({
                         <Search className="h-5 w-5" />
                         <span className="sr-only">Search</span>
                       </Button>
+                      {/* theme toggle */}
+                      <ThemeToggle />
+
                       <Button variant="ghost" size="icon" asChild>
                         <Link href="/cart">
                           <ShoppingCart className="h-5 w-5" />
